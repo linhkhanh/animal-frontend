@@ -30,6 +30,7 @@ class Table extends Component {
                                 handleChange={this.props.handleChange}
                                 toggleCheck={this.props.toggleCheck}
                                 save={this.props.save}
+                                delete={this.props.delete}
                             />
                         )
                     })}

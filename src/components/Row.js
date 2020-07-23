@@ -15,7 +15,7 @@ class Row extends Component {
                         <td>{this.props.animal.age}</td>
                         <td>{this.props.animal.sex}</td>
                         <td>{this.props.animal.adopted ? "True" : "False"}</td>
-                        <td><button id={this.props.index} onClick={this.props.toggleEdit}>Edit</button> <button>Delete</button></td>
+                        <td><button id={this.props.index} onClick={this.props.toggleEdit}>Edit</button> <button a-key={this.props.animal._id} onClick={this.props.delete}>Delete</button></td>
                     </tr> :
                     <tr>
                         <th scope="row">{this.props.index}</th>

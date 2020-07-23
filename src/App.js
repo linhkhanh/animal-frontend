@@ -44,7 +44,7 @@ class App extends Component {
             isEditing: false
         };
         const newData = await animalService.create(newOne);
-        console.log(newData);
+       
         this.setState({
             name: '',
             species: '',
@@ -73,7 +73,7 @@ class App extends Component {
         this.setState({
             animal: animal
         });
-        console.log(animal)
+       
     }
     //  Fetch data
     async fetchAnimal() {
@@ -86,13 +86,17 @@ class App extends Component {
         this.fetchAnimal()
     }
 
+    // edit data
     save = async (event) => {
         event.preventDefault();
         const id = event.target.id;
         const animal = this.state.animal;
     
         const index = animal.findIndex(item => item._id === id);
+        console.log(index);
+
         const updatedData = {
+            _id: id,
             name: this.state.name,
             species: this.state.species,
             breed: this.state.breed,
@@ -104,6 +108,7 @@ class App extends Component {
         }
 
         animal[index] = updatedData;
+        console.log(animal);
         this.setState({
             name: '',
             species: '',
@@ -115,6 +120,20 @@ class App extends Component {
             animal: animal
         });
         await animalService.updateCompletionStatus(id, updatedData);
+    }
+
+    // delete data
+    deleteData = async (event) => {
+        const id = event.target.getAttribute('a-key');
+        await animalService.delete(id);
+        const animal = this.state.animal;
+        const index = animal.findIndex(item => item._id === id);
+        this.setState({
+            animal: [
+                ...animal.slice(0, index),
+                ...animal.slice(index + 1)
+            ]
+        })
     }
     render() {
         const { name, species, breed, sex, age, image, adopted } = this.state;
@@ -138,6 +157,7 @@ class App extends Component {
                     handleChange={this.handleChange}
                     toggleCheck={this.toggleCheck}
                     save={this.save}
+                    delete={this.deleteData}
                 />
             </React.Fragment>
         )

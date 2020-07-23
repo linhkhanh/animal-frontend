@@ -7,8 +7,9 @@ const buildUrl = apiPath => {
 export default {
     async getAll () {
         try {
-            const response = await apiUtil.get(buildUrl('/animal'));
-            console.log(buildUrl('/animal'));
+            console.log(buildUrl('/animals'));
+            const response = await apiUtil.get(buildUrl('/animals'));
+            console.log(response);
             return response.data;
         } catch (err) {
             console.log(err);
@@ -16,15 +17,15 @@ export default {
         }
     },
     async create (newOne) {
-        const response = await apiUtil.post(buildUrl('/animal'), newOne);
+        const response = await apiUtil.post(buildUrl('/animals'), newOne);
         return response.data;
     },
     async delete (id) {
-        const response = await apiUtil.delete(buildUrl(`/animal/${id}`));
+        const response = await apiUtil.delete(buildUrl(`/animals/${id}`));
         return response.data;
     },
     async updateCompletionStatus (id, isCompleted) {
-        const response = await apiUtil.update(buildUrl(`/animal/${id}`),
+        const response = await apiUtil.update(buildUrl(`/animals/${id}`),
             isCompleted,
         );
         return response.data;
