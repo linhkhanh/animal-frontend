@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/animal-frontend/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/animal-frontend/static/js/main.863ab19a.chunk.js",
-    "main.js.map": "/animal-frontend/static/js/main.863ab19a.chunk.js.map",
+    "main.js": "/animal-frontend/static/js/main.88c2b4dd.chunk.js",
+    "main.js.map": "/animal-frontend/static/js/main.88c2b4dd.chunk.js.map",
     "runtime-main.js": "/animal-frontend/static/js/runtime-main.30fa0c58.js",
     "runtime-main.js.map": "/animal-frontend/static/js/runtime-main.30fa0c58.js.map",
     "static/js/2.778e784b.chunk.js": "/animal-frontend/static/js/2.778e784b.chunk.js",
     "static/js/2.778e784b.chunk.js.map": "/animal-frontend/static/js/2.778e784b.chunk.js.map",
     "index.html": "/animal-frontend/index.html",
-    "precache-manifest.92fe48737da56e2fceb10124f2b1175b.js": "/animal-frontend/precache-manifest.92fe48737da56e2fceb10124f2b1175b.js",
+    "precache-manifest.f618c3b6dd754d4dd5179f634d96fa5d.js": "/animal-frontend/precache-manifest.f618c3b6dd754d4dd5179f634d96fa5d.js",
     "service-worker.js": "/animal-frontend/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/animal-frontend/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.778e784b.chunk.js.LICENSE.txt": "/animal-frontend/static/js/2.778e784b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.30fa0c58.js",
     "static/js/2.778e784b.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.863ab19a.chunk.js"
+    "static/js/main.88c2b4dd.chunk.js"
   ]
 }
