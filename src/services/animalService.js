@@ -7,7 +7,7 @@ const buildUrl = apiPath => {
 export default {
     async getAll () {
         try {
-            const response = await apiUtil.get(buildUrl('/animal'));
+            const response = await apiUtil.get(buildUrl('/animals'));
             return response.data;
         } catch (err) {
             console.log(err);
