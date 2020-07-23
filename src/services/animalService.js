@@ -1,7 +1,7 @@
 import apiUtil from '../utils/api';
-
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:4000'
 const buildUrl = apiPath => {
-    return 'http://localhost:4000' + apiPath;
+    return BACKEND_URL + apiPath;
 };
 
 export default {
@@ -24,7 +24,7 @@ export default {
     },
     async updateCompletionStatus (id, isCompleted) {
         const response = await apiUtil.update(buildUrl(`/animal/${id}`),
-            isCompleted
+            isCompleted,
         );
         return response.data;
     }

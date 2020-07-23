@@ -38,7 +38,7 @@ class App extends Component {
             species: this.state.species,
             breed: this.state.breed,
             sex: this.state.sex,
-            age: this.state.age,
+            age: parseInt(this.state.age),
             image: this.state.image,
             adopted: this.state.adopted,
             isEditing: false
