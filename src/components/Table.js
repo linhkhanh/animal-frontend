@@ -4,7 +4,7 @@ import { array, func } from 'prop-types';
 class Table extends Component {
     render() {
         return (
-            <table className="table">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">#</th>

@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@200;300;400&display=swap');
+body {
+  background-color: #fffdfb;
+  font-family: 'Barlow', sans-serif;
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header */
+h1 {
+  font-weight: bolder;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  padding: 3%;
+  color: green;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+ul > li {
+  display: inline;
+  list-style: none;
+  margin: 3%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul > li > a {
+  color: green;
+}
+
+nav {
+  text-align: center;
+  width: 70%;
+  padding-top: 1% ;
+}
+/* end */
+
+/* form */
+.form {
+  background-image: url('https://specials-images.forbesimg.com/imageserve/5e7ce63ca0db2000065b5230/960x0.jpg?cropX1=0&cropX2=958&cropY1=0&cropY2=540');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* */
+  color: #fffdfb;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 5%;
+  margin-bottom: 2%;
+}
+
+form {
+  width: 30%;
+  margin-left: 3%;
+}
+
+.title {
+  width: fit-content; 
+  display: flex;
+  align-items: flex-end;
+  font-weight: bolder;
+}
+
+.title > h2 {
+  font-size: 80px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  padding: 2% 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: bolder;
+}
+
+/* table */
+.table {
+  margin: auto;
+  width: 80%;
+  color: green;
+}
+
+img {
+  width: 300px;
+  height: 250px;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  color: rgb(106, 139, 106);
+  margin-top: 3%;
+  font-weight: lighter;
+  font-size: 17px;
+  border-top: 2px solid green;
+  padding: 1%;
 }

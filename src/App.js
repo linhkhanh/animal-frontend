@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import Header from './components/Header';
 import Form from './components/Form';
 import Table from './components/Table';
+import Footer from './components/Footer';
 import animalService from './services/animalService';
+import './App.css';
 
 class App extends Component {
     constructor(props) {
@@ -58,7 +60,8 @@ class App extends Component {
     }
 
     toggleEdit = (event) => {
-        const index = event.target.id;
+        const index = event.currentTarget.id;
+        console.log(event.target);
         const animal = this.state.animal;
         this.setState({
             name: animal[index].name,
@@ -124,7 +127,7 @@ class App extends Component {
 
     // delete data
     deleteData = async (event) => {
-        const id = event.target.getAttribute('a-key');
+        const id = event.currentTarget.getAttribute('a-key');
         await animalService.delete(id);
         const animal = this.state.animal;
         const index = animal.findIndex(item => item._id === id);
@@ -159,6 +162,8 @@ class App extends Component {
                     save={this.save}
                     delete={this.deleteData}
                 />
+
+                <Footer />
             </React.Fragment>
         )
     }
